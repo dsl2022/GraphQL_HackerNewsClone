@@ -15,12 +15,7 @@ const FEED_QUERY = gql`
   }
 `
 class LinkList extends Component{
-    render(){
-
-        
-
-
-        
+    render(){            
           return (
             <Query query={FEED_QUERY}>
                {({ loading, error, data }) => {
@@ -31,7 +26,10 @@ class LinkList extends Component{
     
                  return (
                  <div>
-                     {linksToRender.map(link => <Link key={link.id} link={link} />)}
+                     {linksToRender.map(
+                       link => 
+                        <Link key={link.id} link={link} />
+                     )}
                 </div>
                 )
             }}
