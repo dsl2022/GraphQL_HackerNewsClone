@@ -2,7 +2,8 @@ import React,{Component} from 'react'
 import Link from './Link'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
-const FEED_QUERY = gql`
+
+export const FEED_QUERY = gql`
   {
     feed {
       links {
@@ -51,7 +52,7 @@ class LinkList extends Component{
                           key={link.id} 
                           link={link} 
                           index={index} 
-                          updateStoreAfterVote={this._updateCacheAfterVote}
+                          updateStoreAfterVote={()=>this._updateCacheAfterVote}
                           />
                      )}
                 </div>
