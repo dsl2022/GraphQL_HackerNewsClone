@@ -4,6 +4,8 @@ import CreateLink from './CreateLink'
 import Header from './Header'
 import Login from './Login'
 import {Route,Switch} from 'react-router-dom'
+import Search from './Search'
+
 
 class App extends Component {
   render() {
@@ -24,6 +26,9 @@ class App extends Component {
           exact path='/login'
           component = {Login}
         />
+        <Route 
+          exact path='/search'
+          component = {Search}/>
       </Switch>
       </div>
     </div>
